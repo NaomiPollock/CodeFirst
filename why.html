@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <!-- main css file -->
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <!-- Forms css file -->
+  <link rel="stylesheet" type="text/css" href="css/forms.css">
+
+  <!-- jQuery library -->
+    <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src='js/main.js'></script>
+  <script type="text/javascript">
+      $(function() {
+    // the element inside of which we want to scroll
+        var $elem = $('#content');
+
+        // show the buttons
+    $('#nav_up').fadeIn('slow');
+    $('#nav_down').fadeIn('slow');  
+
+        // whenever we scroll fade out both buttons
+    $(window).bind('scrollstart', function(){
+        $('#nav_up,#nav_down').stop().animate({'opacity':'0.2'});
+    });
+        // ... and whenever we stop scrolling fade in both buttons
+    $(window).bind('scrollstop', function(){
+        $('#nav_up,#nav_down').stop().animate({'opacity':'1'});
+    });
+
+        // clicking the "down" button will make the page scroll to the $elem's height
+    $('#nav_down').click(
+        function (e) {
+            $('html, body').animate({scrollTop: $elem.height()}, 800);
+        }
+    );
+        // clicking the "up" button will make the page scroll to the top of the page
+    $('#nav_up').click(
+        function (e) {
+            $('html, body').animate({scrollTop: '0px'}, 800);
+        }
+    );
+ });
+  </script>
+
+
+<script type="text/javascript">
+   var started;
+   function showLightBox()
+  { 
+    if (started) return;
+    started = setTimeout(function(){
+        Lightbox.start(document.getElementById('firstImage'));
+        started;
+    },500);
+  }
+  function stopShowLightBox(){
+    if (started) {
+        clearTimeout(started)
+        started = 0;
+    }
+  }
+</script>
+
+    <link rel="stylesheet" type="text/css" href="why.css">
+    <style>
+    header {
+        text-align: center;
+        background: url('http://bigoxenergy.com/wp-content/uploads/2014/02/Renewable-Energy-300x297.jpg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        color: black;
+    }
+    
+    a {
+        color: #ADFF2F;
+    }
+    
+    h1 {
+        font-size: 70px;
+    }
+    
+    img {
+        margin: 40px 0px 0px 0px;
+        border: 7px solid white;
+        border-radius: 20px;
+    }
+    
+    ul {
+        padding: 10px;
+        background: #ff33cc;
+    }
+    
+    li {
+        display: inline;
+        padding: 0px 10px 0px 10px;
+    }
+    
+    article {
+        max-width: 1000px;
+        padding: 20px;
+        margin: 0 auto;
+    }
+    
+    @media (max-width: 500px) {
+        h1 {
+            font-size: 36px;
+        }
+        li {
+            display: block;
+            padding: 5px;
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Lisard Renewables</h1>
+        <ul>
+            <li><a href="Index.html">Home</a></li>
+            <li><a href="why.html">Why Renewable?</a></li>
+            <li><a href="how.html">How to help</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">Types of Renewable</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="Types.html">Wind</a>
+                    <a href="Wind.html">Solar</a>
+                    <a href="water.html">Water</a>
+                </div>
+            </div>
+        </ul>
+    </header>
+
+    <div align="right">
+    <input type="text" name="search" placeholder="Search..">
+
+</div>
+
+    <article>
+        <div id="WhyParagraph">
+      <center>  <h2> Reasons to use Renewable Energy</h2></center>
+<a class="vlightbox" href="https://www.howitworksdaily.com/wp-content/uploads/2015/09/Renewable-energy.jpg" title="1" id="firstImage">
+
+        <img src="https://www.howitworksdaily.com/wp-content/uploads/2015/09/Renewable-energy.jpg"  onMouseOver="javascript:showLightBox()" onMouseOut="javascript:stopShowLightBox()" style="cursor: pointer;" />
+        </a>
+
+        <a class="vlightbox" href="https://cleantechnica.com/files/2014/06/remap_benifites.jpg" title="2" id="firstImage">
+
+
+        <img src="https://cleantechnica.com/files/2014/06/remap_benifites.jpg"  onMouseOver="javascript:showLightBox()" onMouseOut="javascript:stopShowLightBox()" style="cursor: pointer;" id="firstImage"/>
+        </a>
+<a class="vlightbox" href="https://cleantechnica.com/files/2014/06/remap_benifites.jpg" title="2" id="firstImage">
+
+        <img src="http://www.economywatch.com/userfiles/WREW-figure1.png"  onMouseOver="javascript:showLightBox()" onMouseOut="javascript:stopShowLightBox()" style="cursor: pointer;" id="firstImage"/>
+
+
+     </a>
+     <p>
+
+<br>
+<br>
+<br>
+<br>     
+     Renewable energy has multiple advantages as we it not only helps our environment so that we can live for longer it also gives us the opportunity to be able to increase the number of jobs currently in this sector. 
+     Our world will not be able to cope with the damaging changes we are currently doing. 
+     
+</p>
+</div>
+    </article>
+    <footer class="footer">
+    
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <ul class="footer-navigation">
+                    
+                      
+                            <li class="">
+                              <a href="https://Facebook.com">Facebook</a>
+                            </li>
+                      
+                            <li class="">
+                              <a href="https://Instagram.com">Instgram</a>
+                            </li>
+                      
+                            <li class="">
+                              <a href="https://Snapchat.com">Snapchat</a>
+                            </li>       
+                            <li class="">
+                              <a href="https://Twitter.com">Twitter</a>
+                            </li>  
+                            <li class="">
+                              <a href="#">Terms</a>
+                            </li>       
+                            <li class="">
+                              <a href="#">Privacy Policy</a>
+                            </li>        
+                     
+                </ul>
+                      
+                </div>
+            </div>
+        </div><!-- /.row -->
+
+    </div><!-- END Container -->
+
+  
+</footer>
+</p>
+</article>
+</body>
